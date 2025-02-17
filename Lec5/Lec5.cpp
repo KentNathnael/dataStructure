@@ -75,10 +75,10 @@ int converter(char opt){
 }
 
 int search_root(char infix[], int start, int max){
-    int index_root = -1, value_root =  10;
+    int index_root = strlen(infix), value_root =  10;
     int index_temp, value_temp;
     if(start == max) return start;
-    for(int i = start; i <= max; i++){
+    for(int i = start; i >= max; i--){
         if(isOperator(infix[i])){
             index_temp = i;
             value_temp = converter(infix[i]);
