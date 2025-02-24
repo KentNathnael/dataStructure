@@ -10,7 +10,7 @@ struct data
     char telepon[100];
     char email[100];
     data *next;
-} contact;
+}*contact;
 
 data* hashTable[max];
 
