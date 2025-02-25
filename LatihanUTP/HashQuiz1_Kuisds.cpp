@@ -34,7 +34,7 @@ const void push(char name[], int value){
     if(hash_table[index]==NULL){
         hash_table[index] = newNode;
     }
-    else{
+    else{ // linear probing 
         while(hash_table[index]!=NULL){
             index = (index+1)%hash_size;
         }
